@@ -2,6 +2,7 @@
   "name": "hnr-cafe",
   "version": "1.0.0",
   "description": "hnr-cafe.",
+  "private": true,
   "main": "build.js",
   "scripts": {
     "build": "npm run fmt && run-p build:*",
