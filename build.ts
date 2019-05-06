@@ -1,10 +1,7 @@
 import * as ejs from "ejs";
 import * as fs from "fs";
 
-const ACTRESSES: ("hnr" | "nykk")[] = [
-  "hnr",
-  "nykk"
-];
+const ACTRESSES: ("hnr" | "nykk")[] = ["hnr", "nykk"];
 
 const genHTML = (): void => {
   ACTRESSES.forEach(actress => {
