@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="hnr-cafe"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://hnr-cafe.netlify.com/"/>
+    <meta property="og:site_name" content="hnr-cafe"/>
+    <meta property="og:description" content="But love is blind and lovers cannot see. The pretty follies that themselves commit;"/>
+    <meta name="twitter:card" content="summary"/>
+    <title>hnr-cafe</title>
+    <%- include("common/gtag") -%>
+  </head>
+  <body>
+    <main>
+      <%_ actresses.forEach(actress => { -%>
+        <a href="<%= actress %>"><%= actress %></a>
+      <%_ }) -%>
+    </main>
+    <footer>
+      <small>Want to add a btn? Send request via <a href="https://goo.gl/forms/3EObjMMftiwe0BGG2" target="_blank">btn-request</a> form!</small>
+      <small style="bottom: 0px; right: 0px; position: fixed;"><a href="privacy-policy" target="_blank">Privacy Policy</a></small>
+    </footer>
+  </body>
+</html>

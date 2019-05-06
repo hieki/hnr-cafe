@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  npm:
+    container_name: hnr-cafe
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/usr/src/hnr-cafe
+      - /usr/src/hnr-cafe/node_modules
+    working_dir: /usr/src/hnr-cafe
+    entrypoint: npm

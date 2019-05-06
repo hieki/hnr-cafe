@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="<%= actress %>-btn"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://hnr-cafe.netlify.com/<%= actress %>"/>
+    <meta property="og:site_name" content="hnr-cafe"/>
+    <meta property="og:description" content="But love is blind and lovers cannot see. The pretty follies that themselves commit;"/>
+    <meta name="twitter:card" content="summary"/>
+    <title><%= actress %>-btn</title>
+    <%- include("common/gtag") -%>
+    <script src="./src/build.js"></script>
+  </head>
+  <body>
+
+    <input type="text" id="search-form" placeholder="検索">
+
+    <p>
+      <%_ sounds.forEach(sound => { -%>
+        <%_ const title = sound.split(".")[0]; -%>
+        <%_ const extension = sound.split(".")[1]; -%>
+        <%_ const buffer = new Buffer(title); -%>
+        <%_ const id = buffer.toString("base64"); -%>
+        <%_ if (["wav", "mp3", "ogg", "acc"].includes(extension)) { -%>
+          <button class="btn" id="<%= id %>"><%= title %></button>
+          <audio id="<%= `audio-${id}` %>" preload="none">
+            <source src="<%= `sounds/${actress}/${sound}` %>" type="audio/<%= `${extension}` %>">
+          </audio>
+        <%_ } -%>
+      <%_ }) -%>
+    </p>
+
+    <p>
+      <button id="flashback-btn">走馬灯を流す</button>
+    </p>
+
+  </body>
+</html>
