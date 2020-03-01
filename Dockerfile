@@ -1,4 +1,4 @@
-FROM node:12.5.0
+FROM node:13.8.0
 LABEL mainainer="hieki <ksakahieki@gmail.com>"
 
 ENV HNR_ROOT /usr/src/hnr-cafe
