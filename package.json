@@ -9,11 +9,9 @@
     "build:js": "webpack",
     "build:html": "ts-node --project ./tsconfig.node.json ./build.ts",
     "build:sounds": "cp -r ./client/sounds ./public/sounds",
-    "fmt": "run-p eslint prettier",
+    "fmt": "run-p eslint",
     "eslint": "eslint -c .eslintrc.json \"./**/*.{js,ts}\"",
-    "eslint-fix": "eslint --fix -c .eslintrc.json \"./**/*.{js,ts}\"",
-    "prettier": "prettier -c \"./**/*.{js,ts}\"",
-    "prettier-fix": "prettier --write \"./**/*.{js,ts}\""
+    "eslint-fix": "eslint --fix -c .eslintrc.json \"./**/*.{js,ts}\""
   },
   "author": "hieki",
   "license": "MIT",
