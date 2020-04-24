@@ -20,12 +20,11 @@ const genHTML = (): void => {
             "utf-8"
           );
         } else {
-          throw Error("ERROR: Fail to render");
+          throw new Error("ERROR: Fail to render");
         }
       }
     );
   });
-  return;
 };
 
 const genIndexHTML = (): void => {
@@ -44,7 +43,6 @@ const genIndexHTML = (): void => {
       }
     }
   );
-  return;
 };
 
 const genPrivacyPolicyHTML = (): void => {
@@ -56,10 +54,9 @@ const genPrivacyPolicyHTML = (): void => {
         "utf-8"
       );
     } else {
-      throw Error("ERROR: Fail to render privacy-policy.ejs");
+      throw new Error("ERROR: Fail to render privacy-policy.ejs");
     }
   });
-  return;
 };
 
 const gen = (): void => {
@@ -67,7 +64,6 @@ const gen = (): void => {
   genIndexHTML();
   genPrivacyPolicyHTML();
   console.log("DONE.");
-  return;
 };
 
 gen();
