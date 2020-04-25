@@ -18,12 +18,12 @@ const allButtons = (): Element[] => {
 
 export const bindButtons = (): void => {
   allButtons().forEach(button => {
-    button.addEventListener("click", (e: Event) => {
+    button.addEventListener("click", async (e: Event) => {
       if (e.target instanceof HTMLElement) {
         const audio = document.getElementById(`audio-${e.target.id}`);
         if (audio instanceof HTMLAudioElement) {
           audio.currentTime = 0;
-          audio.play();
+          await audio.play();
         }
         if (e.target.textContent) {
           sendEvent(e.target.textContent);
