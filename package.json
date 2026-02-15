@@ -9,8 +9,8 @@
     "build:html": "ts-node --project ./tsconfig.node.json ./build.ts",
     "build:sounds": "cp -r ./client/sounds ./public/sounds",
     "fmt": "run-p eslint",
-    "eslint": "eslint -c .eslintrc.json \"./**/*.{js,ts}\"",
-    "eslint-fix": "eslint --fix -c .eslintrc.json \"./**/*.{js,ts}\""
+    "eslint": "eslint -c eslint.config.mjs \"./**/*.{js,ts,mjs}\"",
+    "eslint-fix": "eslint --fix -c eslint.config.mjs \"./**/*.{js,ts,mjs}\""
   },
   "author": "hieki",
   "license": "MIT",
