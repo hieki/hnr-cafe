@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
+  allConfig: js.configs.all,
 });
 const gitignorePath = path.resolve(__dirname, ".gitignore");
 
@@ -45,14 +45,20 @@ export default defineConfig([
     },
 
     rules: {
-      "@typescript-eslint/explicit-function-return-type": ["error", {
-        allowExpressions: true,
-      }],
+      "@typescript-eslint/explicit-function-return-type": [
+        "error",
+        {
+          allowExpressions: true,
+        },
+      ],
 
-      "comma-spacing": ["error", {
-        before: false,
+      "comma-spacing": [
+        "error",
+        {
+          before: false,
           after: true,
-      }],
+        },
+      ],
 
       curly: ["error", "all"],
       "default-case": "error",
@@ -83,9 +89,13 @@ export default defineConfig([
       "space-unary-ops": "error",
       strict: [0, "global"],
 
-      quotes: ["error", "double", {
-        allowTemplateLiterals: true,
-      }],
+      quotes: [
+        "error",
+        "double",
+        {
+          allowTemplateLiterals: true,
+        },
+      ],
 
       semi: ["error", "always"],
     },

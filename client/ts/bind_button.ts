@@ -3,7 +3,6 @@ const sleep = (num: number): Promise<void> => {
 };
 
 const sendEvent = (eventName: string): void => {
-  /* eslint-disable @typescript-eslint/camelcase */
   gtag("event", "btn-click", {
     event_category: document.title,
     event_label: eventName,
