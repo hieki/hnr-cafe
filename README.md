@@ -1,7 +1,7 @@
 # hnr-cafe
 
 ## 見
-https://hnr-cafe.netlify.com/
+https://hnr-cafe.netlify.app/
 
 ## 環境
  - `.node-version` を見ろ
