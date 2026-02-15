@@ -7,7 +7,7 @@ const executeQuery = (query: string): void => {
       } else {
         button.style.display = "none";
       }
-    }
+    },
   );
 };
 

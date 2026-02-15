@@ -1,15 +1,13 @@
-const sleep = (num: number): Promise<Function> => {
-  return new Promise(resolve => setTimeout(resolve, num));
+const sleep = (num: number): Promise<void> => {
+  return new Promise((resolve) => setTimeout(resolve, num));
 };
 
 const sendEvent = (eventName: string): void => {
-  /* eslint-disable @typescript-eslint/camelcase */
   gtag("event", "btn-click", {
     event_category: document.title,
     event_label: eventName,
-    value: 1
+    value: 1,
   });
-  /* eslint-enable */
 };
 
 const allButtons = (): Element[] => {
@@ -17,7 +15,7 @@ const allButtons = (): Element[] => {
 };
 
 export const bindButtons = (): void => {
-  allButtons().forEach(button => {
+  allButtons().forEach((button) => {
     button.addEventListener("click", async (e: Event) => {
       if (e.target instanceof HTMLElement) {
         const audio = document.getElementById(`audio-${e.target.id}`);
