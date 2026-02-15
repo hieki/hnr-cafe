@@ -1,4 +1,4 @@
-const sleep = (num: number): Promise<Function> => {
+const sleep = (num: number): Promise<void> => {
   return new Promise((resolve) => setTimeout(resolve, num));
 };
 
